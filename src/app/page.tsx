@@ -10,6 +10,11 @@ import {
   ExternalLink,
   MailIcon,
   FlowerIcon,
+  ChevronRight,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Github,
 } from "lucide-react";
 
 // Define types for the weather data
@@ -50,12 +55,19 @@ export default async function Home() {
   }
 
   return (
-    <main className="max-w-xl my-20 mx-auto px-4 py-10">
+    <main className="max-w-2xl my-20 mx-auto px-4 py-10">
       <div>
+        <h1 className="text-3xl font-bold">Hi. I'm Lucas Jansen.</h1>
         <h1 className="text-3xl font-bold mb-8">
-          Hi. I'm Lucas Jansen.{" "}
           <span className="text-neutral-500 mr-2">Frontend developer from</span>
-          <span>Amsterdam</span>
+          <span className="bg-neutral-100 px-2 inline-flex border-neutral-200 border items-center gap-1 rounded-lg">
+            Amsterdam
+            <span className="text-base font-medium">
+              {weatherData &&
+                !weatherError &&
+                `${weatherData.current.temperature_2m}${weatherData.current_units.temperature_2m}`}
+            </span>
+          </span>
         </h1>
         <p className="text-lg text-neutral-600">
           Currently, I'm expanding Revasi to the rest of Indonesia and working
@@ -65,42 +77,14 @@ export default async function Home() {
 
       <div className="my-4">
         <Link
-          href={"/about"}
-          className="text-neutral-900 p-2 flex items-center gap-2 rounded-lg border-neutral-300 border"
+          href="mailto:wlajansen16@gmail.com"
+          className="text-neutral-900 p-2 w-fit flex items-center gap-2 rounded-lg border-neutral-300 border"
         >
           <MailIcon className="h-4 w-4 mr-2" />
-          Email
+          Send me an email
         </Link>
       </div>
 
-      {weatherData && !weatherError && (
-        <div className="my-6 p-4 bg-neutral-50 shadow-sm rounded-lg border border-neutral-100">
-          <div className="flex items-center gap-2 mb-2">
-            <Cloud className="h-5 w-5 text-neutral-700" />
-            <span className="font-medium">Amsterdam Weather</span>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <Thermometer className="h-4 w-4 text-neutral-500" />
-              <span>
-                {weatherData.current.temperature_2m}
-                {weatherData.current_units.temperature_2m}
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Wind className="h-4 w-4 text-neutral-500" />
-              <span>
-                {weatherData.current.wind_speed_10m}
-                {weatherData.current_units.wind_speed_10m}
-              </span>
-            </div>
-            <div className="text-xs text-neutral-400 mt-1">
-              Last updated:{" "}
-              {new Date(weatherData.current.time).toLocaleTimeString()}
-            </div>
-          </div>
-        </div>
-      )}
       {weatherError && (
         <div className="my-6 p-4 bg-red-50 rounded-lg border border-red-100 text-red-600">
           Could not load weather data. Please try again later.
@@ -121,9 +105,7 @@ export default async function Home() {
               <FlowerIcon className="h-5 w-5 text-white" />
             </div>
             <div className="flex-1">
-              <div className="font-medium text-neutral-900">
-                Revasi
-              </div>
+              <div className="font-medium text-neutral-900">Revasi</div>
               <div className="text-sm text-neutral-600 mt-1">
                 Fine dining reservations management platform
               </div>
@@ -142,9 +124,7 @@ export default async function Home() {
               <Layers className="h-5 w-5 text-white" />
             </div>
             <div className="flex-1">
-              <div className="font-medium text-neutral-900">
-                Let's eat
-              </div>
+              <div className="font-medium text-neutral-900">Let's eat</div>
               <div className="text-sm text-neutral-600 mt-1">
                 Not sure what to eat? Let's eat will help you decide.
               </div>
@@ -161,34 +141,78 @@ export default async function Home() {
 
       <h3 className="text-xl font-bold mb-8">Projects</h3>
 
-      <div className="space-y-8">
-        <div>
-          <div className="flex items-center gap-3 mb-1">
-            <h4 className="text-lg font-normal">Revasi</h4>
-            <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
-              Booking now
-            </span>
+      <div className="space-y-4 -ml-4">
+        <div className="group p-4 rounded-lg border border-transparent hover:border-neutral-200 hover:bg-neutral-50 transition-all duration-200 cursor-pointer">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3 mb-1">
+              <h4 className="text-lg font-normal">Revasi</h4>
+              <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+                Booking now
+              </span>
+            </div>
+            <ChevronRight className="h-4 w-4 text-transparent group-hover:text-neutral-400 transition-all duration-200" />
           </div>
-          <p className="text-gray-500">Design & Development Agency</p>
-        </div>
-
-        <div>
-          <h4 className="text-lg font-normal mb-1">Let's eat</h4>
-          <p className="text-gray-500">Premium Framer templates boutique</p>
-        </div>
-
-        <div>
-          <h4 className="text-lg font-normal mb-1">Pohe</h4>
           <p className="text-gray-500">
-            Website inspiration from the Dark Side
+            Fine dining reservations management platform
           </p>
         </div>
-
-        <div>
-          <h4 className="text-lg font-normal mb-1">Moneynow</h4>
-          <p className="text-gray-500">Make a living with Framer templates</p>
-        </div>
       </div>
+
+      <footer className="mt-8 pt-10 border-t border-neutral-200">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+          <div className="max-w-sm">
+            <div className="mb-3">
+              <Link
+                href="https://digics.com"
+                className="font-semibold text-lg inline-flex items-center group"
+              >
+                Digics
+                <ExternalLink className="ml-1.5 h-3.5 w-3.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200" />
+              </Link>
+            </div>
+            <p className="text-neutral-600 text-sm mb-4">
+              Digital consultancy specialized in building beautiful, functional
+              digital products and experiences for forward-thinking companies.
+            </p>
+            <p className="text-xs text-neutral-500">
+              © {new Date().getFullYear()} Lucas Jansen. All rights reserved.
+            </p>
+          </div>
+
+          <div>
+            <div className="flex gap-4">
+              <Link
+                href="https://twitter.com/lucasjansen"
+                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
+              >
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link
+                href="https://linkedin.com/in/lucasjansen"
+                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link
+                href="https://github.com/lucasjansen"
+                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
+              >
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link
+                href="https://instagram.com/lucasjansen"
+                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
