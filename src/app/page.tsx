@@ -1,11 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
-  Cloud,
-  Wind,
-  Thermometer,
   Briefcase,
-  Code,
   Layers,
   ExternalLink,
   MailIcon,
@@ -17,7 +12,6 @@ import {
   Github,
 } from "lucide-react";
 
-// Define types for the weather data
 type WeatherData = {
   current: {
     temperature_2m: number;
