@@ -51,7 +51,7 @@ export default async function Home() {
   return (
     <main className="max-w-2xl my-20 mx-auto px-4 py-10">
       <div>
-        <h1 className="text-3xl font-bold">Hi. I'm Lucas Jansen.</h1>
+        <h1 className="text-3xl font-bold">Hi. I&apos;m Lucas Jansen.</h1>
         <h1 className="text-3xl font-bold mb-8">
           <span className="text-neutral-500 mr-2">Frontend developer from</span>
           <span className="bg-neutral-100 px-2 inline-flex border-neutral-200 border items-center gap-1 rounded-lg">
@@ -64,7 +64,7 @@ export default async function Home() {
           </span>
         </h1>
         <p className="text-lg text-neutral-600">
-          Currently, I'm expanding Revasi to the rest of Indonesia and working
+          Currently, I&apos;m expanding Revasi to the rest of Indonesia and working
           on freelance projects on the side.
         </p>
       </div>
@@ -118,9 +118,9 @@ export default async function Home() {
               <Layers className="h-5 w-5 text-white" />
             </div>
             <div className="flex-1">
-              <div className="font-medium text-neutral-900">Let's eat</div>
+              <div className="font-medium text-neutral-900">Let&apos;s eat</div>
               <div className="text-sm text-neutral-600 mt-1">
-                Not sure what to eat? Let's eat will help you decide.
+                Not sure what to eat? Let&apos;s eat will help you decide.
               </div>
               <div className="mt-2 flex items-center gap-2">
                 <div className="w-24 h-1.5 bg-neutral-100 rounded-full overflow-hidden">
