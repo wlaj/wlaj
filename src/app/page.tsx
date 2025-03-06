@@ -64,8 +64,8 @@ export default async function Home() {
           </span>
         </h1>
         <p className="text-lg text-neutral-600">
-          Currently, I&apos;m expanding Revasi to the rest of Indonesia and working
-          on freelance projects on the side.
+          Currently, I&apos;m expanding Revasi to the rest of Indonesia and
+          working on freelance projects on the side.
         </p>
       </div>
 
@@ -136,20 +136,22 @@ export default async function Home() {
       <h3 className="text-xl font-bold mb-8">Projects</h3>
 
       <div className="space-y-4 -ml-4">
-        <div className="group p-4 rounded-lg border border-transparent hover:border-neutral-200 hover:bg-neutral-50 transition-all duration-200 cursor-pointer">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 mb-1">
-              <h4 className="text-lg font-normal">Revasi</h4>
-              <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
-                Booking now
-              </span>
+        <Link href="https://locavorenxt.revasi.net">
+          <div className="group p-4 rounded-lg border border-transparent hover:border-neutral-200 hover:bg-neutral-50 transition-all duration-200 cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3 mb-1">
+                <h4 className="text-lg font-normal">Revasi</h4>
+                <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+                  Booking now
+                </span>
+              </div>
+              <ChevronRight className="h-4 w-4 text-transparent group-hover:text-neutral-400 transition-all duration-200" />
             </div>
-            <ChevronRight className="h-4 w-4 text-transparent group-hover:text-neutral-400 transition-all duration-200" />
+            <p className="text-gray-500">
+              Fine dining reservations management platform
+            </p>
           </div>
-          <p className="text-gray-500">
-            Fine dining reservations management platform
-          </p>
-        </div>
+        </Link>
       </div>
 
       <footer className="mt-8 pt-10 border-t border-neutral-200">
@@ -157,7 +159,7 @@ export default async function Home() {
           <div className="max-w-sm">
             <div className="mb-3">
               <Link
-                href="https://digics.com"
+                href="https://digics.net"
                 className="font-semibold text-lg inline-flex items-center group"
               >
                 Digics
@@ -176,32 +178,18 @@ export default async function Home() {
           <div>
             <div className="flex gap-4">
               <Link
-                href="https://twitter.com/lucasjansen"
-                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="https://linkedin.com/in/lucasjansen"
+                href="https://www.linkedin.com/in/lucas-jansen-boekee-69a220187/"
                 className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="https://github.com/lucasjansen"
+                href="https://github.com/wlaj"
                 className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                href="https://instagram.com/lucasjansen"
-                className="text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
               </Link>
             </div>
           </div>
