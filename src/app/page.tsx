@@ -6,8 +6,6 @@ import {
   MailIcon,
   FlowerIcon,
   ChevronRight,
-  Twitter,
-  Instagram,
   Linkedin,
   Github,
 } from "lucide-react";
