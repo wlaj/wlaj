@@ -8,6 +8,8 @@ import {
   ChevronRight,
   Linkedin,
   Github,
+  LanguagesIcon,
+  ChefHatIcon,
 } from "lucide-react";
 
 type WeatherData = {
@@ -112,19 +114,36 @@ export default async function Home() {
           </div>
 
           <div className="flex items-start gap-3 p-3 bg-neutral-100 rounded-md border border-neutral-200 transition-all hover:shadow-sm">
-            <div className="flex items-center justify-center h-10 w-10 bg-blue-600 rounded-md">
-              <Layers className="h-5 w-5 text-white" />
+            <div className="flex items-center justify-center h-10 w-10 bg-green-600 rounded-md">
+              <LanguagesIcon className="h-5 w-5 text-white" />
             </div>
             <div className="flex-1">
-              <div className="font-medium text-neutral-900">Let&apos;s eat</div>
+              <div className="font-medium text-neutral-900">Bahasa</div>
               <div className="text-sm text-neutral-600 mt-1">
-                Not sure what to eat? Let&apos;s eat will help you decide.
+                Immersive language learning platform
               </div>
               <div className="mt-2 flex items-center gap-2">
                 <div className="w-24 h-1.5 bg-neutral-100 rounded-full overflow-hidden">
-                  <div className="h-full w-1/4 bg-blue-500 rounded-full"></div>
+                  <div className="h-full w-3/4 bg-green-500 rounded-full"></div>
                 </div>
-                <span className="text-xs text-neutral-500">25% complete</span>
+                <span className="text-xs text-neutral-500">75% complete</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 p-3 bg-neutral-100 rounded-md border border-neutral-200 transition-all hover:shadow-sm">
+            <div className="flex items-center justify-center h-10 w-10 bg-blue-600 rounded-md">
+              <ChefHatIcon className="h-5 w-5 text-white" />
+            </div>
+            <div className="flex-1">
+              <div className="font-medium text-neutral-900">Fastchaps</div>
+              <div className="text-sm text-neutral-600 mt-1">
+                Not sure what to eat? We will help you decide.
+              </div>
+              <div className="mt-2 flex items-center gap-2">
+                <div className="w-24 h-1.5 bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="h-full w-2/4 bg-blue-500 rounded-full"></div>
+                </div>
+                <span className="text-xs text-neutral-500">50% complete</span>
               </div>
             </div>
           </div>
